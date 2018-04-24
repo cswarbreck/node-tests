@@ -18,4 +18,12 @@ it('should square two numbers', ()=>{
     }else{
         console.log('Wow, ur so good a mathfs');
     }
-})
+});
+
+it('should cube the number', ()=>{
+    var res = utils.cube(3);
+
+    if (res !== 27){
+        throw new Error(`Expected 27, but got ${res}`);
+    }
+});
