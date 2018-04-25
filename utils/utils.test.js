@@ -33,6 +33,13 @@ it('should square two numbers', ()=>{
     } */
 });
 
+it('should async square two numbers', (done)=>{
+    utils.asyncSquare(4, (square)=>{
+        expect(square).toBe(16).toBeA('number');
+        done();
+    });
+});
+
 it('should cube the number', ()=>{
     var res = utils.cube(3);
 
