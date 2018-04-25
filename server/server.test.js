@@ -14,3 +14,16 @@ it('should return hello world as a response', (done)=>{
     })
     .end(done)
 });
+
+it('should return the user object', (done)=>{
+    request(app)
+    .get('/users')
+    .expect(200)
+    .expect((res)=>{
+        expect(res.body).toInclude({
+            name: 'Cosmo',
+            age: 28
+        });
+    })
+    .end(done)
+});

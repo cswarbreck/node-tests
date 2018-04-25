@@ -9,5 +9,18 @@ app.get('/', (req, res)=>{
     });
 });
 
+app.get('/users', (req, res)=>{
+    res.send([{
+        name: 'Cos',
+        age: 21
+    },{
+        name: 'Cosmo',
+        age: 28
+    },{
+        name: 'mo',
+        age: 31
+    }]);
+});
+
 app.listen(3000);
 module.exports.app = app;
