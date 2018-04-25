@@ -1,23 +1,36 @@
 const utils = require('./utils');
 
+const expect = require('expect');
+
 it('should add two numbers', ()=>{
     var res = utils.add(33, 11);
+
+    expect(res).toBe(44).toBeA('number');
     
-    if (res !== 44) {
+    /* if (res !== 44) {
         throw new Error(`Expected 44, but you got ${res}`)
     }else{
         console.log('Well done, good job buddy!');
-    }
+    } */
+});
+
+it('should async add two numbers', ()=>{
+    utils.asyncAdd(4, 3, (sum)=>{
+        expect(sum).toBe(7).toBeA('Number');
+        done();
+    });
 });
 
 it('should square two numbers', ()=>{
     var res = utils.square(2);
 
-    if (res !== 4){
+    expect(res).toBe(4).toBeA('number');
+
+/*     if (res !== 4){
         throw new Error(`Expected 4, but got ${res}`)
     }else{
         console.log('Wow, ur so good a mathfs');
-    }
+    } */
 });
 
 it('should cube the number', ()=>{
@@ -27,3 +40,13 @@ it('should cube the number', ()=>{
         throw new Error(`Expected 27, but got ${res}`);
     }
 });
+
+/* it('should verify first and last names are set', ()=>{
+    var user = {location: 'London', age: 28};
+    var res = utils.setName(user, 'Cosmo Swarbreck');
+    
+    expect(res).toInclude({
+        firstName: 'Cosmo',
+        lastName: 'Swarbreck'
+    });
+}); */

@@ -16,10 +16,10 @@
     "url": "https://github.com/cswarbreck/node-tests/issues"
   },
   "homepage": "https://github.com/cswarbreck/node-tests#readme",
-  "dependencies": {
-    "nodemon": "^1.17.3"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "mocha": "^5.1.1"
+    "expect": "^1.20.2",
+    "mocha": "^5.1.1",
+    "nodemon": "^1.17.3"
   }
 }
