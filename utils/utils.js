@@ -1,8 +1,8 @@
 module.exports.add = (a, b) => a + b;
 
 module.exports.asyncAdd = (a, b, callback) =>{
-    setTimeout(()=>{
-        callBack(a+b);
+    setTimeout( ()=>{
+        callBack(a + b);
     }, 1000);
 };
 
